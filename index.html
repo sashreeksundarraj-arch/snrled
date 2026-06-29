@@ -77,28 +77,15 @@
     width:min(80vw, 360px);
     margin-bottom:18px;
   }
-  /* PLACEHOLDER: replace with your SNRLED chrome PNG logo */
   .wordmark-img{
     width:100%;
     display:block;
     filter:drop-shadow(0 0 30px rgba(180,200,205,0.25));
+    animation:logo-glow 5s ease-in-out infinite;
   }
-  .wordmark-fallback{
-    font-family:'Cinzel Decorative', serif;
-    font-weight:900;
-    font-size:clamp(2.6rem, 13vw, 4.5rem);
-    letter-spacing:0.04em;
-    background:linear-gradient(180deg, var(--chrome-3), var(--chrome-1) 45%, var(--chrome-2) 55%, var(--chrome-3));
-    background-size:100% 220%;
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-    animation:shimmer 5s ease-in-out infinite;
-    text-shadow:0 0 40px rgba(190,210,215,0.15);
-  }
-  @keyframes shimmer{
-    0%,100%{background-position:0 0%;}
-    50%{background-position:0 100%;}
+  @keyframes logo-glow{
+    0%,100%{filter:drop-shadow(0 0 30px rgba(180,200,205,0.25));}
+    50%{filter:drop-shadow(0 0 48px rgba(180,200,205,0.45));}
   }
   .tagline{
     font-size:0.85rem;
@@ -436,14 +423,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wordmark-wrap reveal in">
-    <!--
-      PLACEHOLDER: SNRLED logo PNG.
-      Drop your chrome wordmark file in as snrled-logo.png alongside this
-      file and uncomment the <img> tag below. Until then, a CSS shimmer
-      fallback wordmark is shown.
-    -->
-    <!-- <img class="wordmark-img" src="snrled-logo.png" alt="SNRLED"> -->
-    <div class="wordmark-fallback">SNRLED</div>
+    <img class="wordmark-img" src="snrled-logo.png" alt="SNRLED">
   </div>
   <div class="tagline reveal in">Pool Party</div>
   <div class="date reveal in">Friday · July 17</div>
